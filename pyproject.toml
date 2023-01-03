@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "snippingml"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8.2"
+PyAutoGUI = "^0.9.53"
+wikipedia = "^1.4.0"
+transformers = "^4.24.0"
+poethepoet = "^0.16.4"
+sentencepiece = "^0.1.97"
+protobuf = ">=3.20.0,<3.21.0"
+python-doctr = "^0.6.0"
+pynput = "^1.7.6"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+ipykernel = "^6.17.1"
+tqdm = "^4.64.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+force-cuda11 = "python -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu111"
